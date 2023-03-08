@@ -6,10 +6,17 @@ const UserKm = parseInt(prompt("Quanti KM vuoi percorrere?"));
 const UserAge = parseInt(prompt("Quanti anni hai ?"));
 console.log(UserKm, UserAge);
 
+
 // ELABORAZIONE DATI
 
-//Logica
-// Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
-// il prezzo del biglietto è definito in base ai km (0.21 € al km)
-// va applicato uno sconto del 20% per i minorenni
-// va applicato uno sconto del 40% per gli over 65.
+// calcolo prezzo intero del biglietto
+const ticketPrice = (0.21 * UserKm)
+console.log(ticketPrice);
+
+// calcolo prezzo biglietto con i 2 sconti
+// per minorenni
+const specialPrice1 = parseInt (ticketPrice - (ticketPrice * 0.2));
+// per over 65
+const specialPrice2 = parseInt (ticketPrice - (ticketPrice * 0.4));
+
+
